@@ -1,0 +1,10 @@
+{
+  "name": "range-component-for-mango",
+  "version": "1.0.0",
+  "description": "Components Range for Mango",
+  "main": "index.js",
+  "repository": "https://github.com/jadrdev/range-component-for-mango",
+  "author": "Joshua Aarón Díaz Robayna",
+  "license": "MIT",
+  "private": false
+}
