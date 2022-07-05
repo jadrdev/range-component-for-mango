@@ -1,5 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Home from "./components/Home";
+import App from "./routes/App";
+import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(<Home />, document.getElementById("app"));
+const root = ReactDOM.createRoot(
+  document.getElementById("app")
+);
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
