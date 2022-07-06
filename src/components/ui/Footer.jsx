@@ -10,14 +10,14 @@ export const Footer = () => {
         <div className="flex flex-wrap justify-center">
           <ul className="flex items-center space-x-4">
             <li>
-              <Link to="/" className="block mt-4 lg:inline-block lg:mt-0 text-white">
+              <Link to="/" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4">
                 <span>Home</span>
               </Link>
             </li>
-            <Link to="/exercise1" className="block mt-4 lg:inline-block lg:mt-0 text-white">
+            <Link to="/exercise1" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4">
               <span>Exercise 1</span>
             </Link>
-            <Link to="exercise2" className="block mt-4 lg:inline-block lg:mt-0 text-white">
+            <Link to="exercise2" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4">
               <span>Exercise 2</span>
             </Link>
           </ul>
