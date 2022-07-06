@@ -1,4 +1,3 @@
-import React from 'react'
 import { useEffect, useState } from 'react'
 import { serviceUrl } from '../constants/Constants';
 
@@ -12,10 +11,7 @@ const useFetchApi = () => {
   useEffect(() => {
     fetch(`${serviceUrl}/exercise1`)
       .then((response) => response.json())
-      .then((numbers) => {
-        console.log(numbers)
-        setData(numbers)
-      });
+      .then((numbers) => {setData(numbers)});
   }, []);
 
   return data;

@@ -1,13 +1,11 @@
-import React from "react";
-
 const Exercise2 = () => {
   return (
-    <div>
-      <h1 className="text-center sm:text-center"> Fixed values range</h1>
-      <div className="container mx-auto text-center sm:text-center  ">
-        <p>Aquí va el ejercicio</p>
+    <>
+      <h1 className="text-center sm:text-center text-4xl antialiased">Fixed values range</h1>
+      <div className="container text-base text-1xl mx-auto text-center sm:text-center">
+        <p className='text-2sm'>A bar will be displayed with the price range between which a price can oscillate</p>
       </div>
-    </div>
+    </>
   );
 };
 
