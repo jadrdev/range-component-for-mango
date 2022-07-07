@@ -1,21 +1,20 @@
-import { useEffect, useState } from 'react'
-import { serviceUrl } from '../constants/Constants';
+import { useEffect, useState } from 'react';
 
 /**
  * It fetches data from the server and sets the data to the state
  * @returns The data is being returned.
  */
 
-const useFetchApi = () => {
+const useFetchApi = (url) => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch(`${serviceUrl}/exercise1`)
+    fetch(url)
       .then((response) => response.json())
-      .then((numbers) => {setData(numbers)});
+      .then((numbers) => { setData(numbers); });
   }, []);
 
   return data;
   
-}
+};
 
-export default useFetchApi
+export default useFetchApi;

@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .sliderRange {
+    position: relative;
+    width: 80%;
+    margin: 20px auto 40px auto;
+  }
+.bullet_initial {
+    width: 20px;
+    border-radius: 50%;
+    background-color: #000;
+    height: 20px;
+    position: absolute;
+    top: inherit;
+    left: 0;
+    margin-top: -8px;
+    cursor: grab;
+}
+
+  .bullet_final {
+    width: 20px;
+    border-radius: 50%;
+    background-color: #000;
+    height: 20px;
+    position: absolute;
+    top: inherit;
+    right: 0;
+    margin-top: -12px;
+    cursor: grab;
+}
+  .line {
+    width: 100%;
+    background: grey;
+    height: 4px;
+  }
+}
+
