@@ -6,7 +6,7 @@ export const Menu = () => {
       <nav className="flex items-center justify-between flex-wrap bg-black p-6">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <Link to="/">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 192.756 192.756">
+          <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 192.756 192.756">
               <g fillRule="evenodd" clipRule="evenodd">
               <path d="M0 0h192.756v192.756H0V0z" />
               <path fill="#fff" d="M35.024 113.982h-2.817l2.817-2.287V78.861h11.619l-2.904 2.289v30.545l2.816 2.287H35.024zM12.666 113.982h7.658l-2.553-2.287V96.643h-2.553v15.052l-2.552 2.287zM27.454 113.982l4.137-11.707-9.859-23.326h-8.891l14.613 35.033zM51.485 114.07h7.658l-2.553-2.199 4.93-21.743h-2.465l-5.017 21.743-2.553 2.199z" />

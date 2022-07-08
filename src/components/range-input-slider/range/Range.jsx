@@ -1,19 +1,23 @@
 import InputRange from "../inputs/InputRange"
 import SliderRange from "../slider/SliderRange"
 
-
 const Range = (props) => {
-  const { max, min, readOnly } = props;
+  const { max, min } = props;
+  
+
   return (
     <>
       <InputRange
         max={max}
         min={min}
-        readOnly={readOnly}
       />
-      <SliderRange />
+      <SliderRange
+        max={max}
+        min={min}
+      />
     </>
   )
 }
+
 
 export default Range
