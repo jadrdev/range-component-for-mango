@@ -4,7 +4,6 @@
 - [Description](#description)
 - [Requirements of the project](#requirements-of-the-project)
 - [How to install and use](#how-to-install-and-use)
-- [Mocked server](#mocked-server)
 
 ## Description
 
@@ -24,3 +23,9 @@ Just clone this git repository, and run in the terminal, targetting your cloned 
 ```
 
 Then, you can access the application in `http://localhost:8080/`.
+
+## How to use test
+
+```
+> yarn test
+```
