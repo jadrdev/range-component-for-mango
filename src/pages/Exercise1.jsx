@@ -1,4 +1,4 @@
-
+import React from 'react'
 import useFetchApi from '../hooks/useFetchApi';
 import { url1 } from '../constants/Constants';
 import Range from '../components/range-input-slider/range/Range';

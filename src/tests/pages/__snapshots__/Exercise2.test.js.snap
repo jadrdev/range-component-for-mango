@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el Exercise2 Debe de mostrar el componente Exercise2 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+       
+      <div
+        class="container text-base text-1xl mx-auto text-center sm:text-center mt-10"
+      >
+        <h1
+          class="text-center sm:text-center text-4xl antialiased"
+        >
+          Fixed values range
+        </h1>
+        <p
+          class="text-2sm"
+        >
+          A bar will be displayed with the price range between which a price can oscillate
+        </p>
+        <div
+          class="flex flex-wrap -mx-3 mb-6"
+        >
+          <div
+            class="w-full md:w-1/2 px-3 mb-6 md:mb-0 my-8"
+          >
+            <input
+              autocomplete="off"
+              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              name="Inputleft"
+              placeholder="0"
+              readonly=""
+              type="number"
+              value="0"
+            />
+          </div>
+          <div
+            class="w-full md:w-1/2 px-3 my-8"
+          >
+            <input
+              autocomplete="off"
+              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              name="InputRight"
+              placeholder="100"
+              readonly=""
+              type="number"
+              value="100"
+            />
+          </div>
+        </div>
+        <div
+          class="sliderRange"
+        >
+          <div
+            actual-value="0"
+            class="bullet_initial"
+            id="bullet_initial"
+            style="left: 0%;"
+            type="left"
+          />
+          <div
+            class="line"
+          />
+          <div
+            actual-value="100"
+            class="bullet_final"
+            id="bullet_final"
+            style="left: 100%;"
+            type="right"
+          />
+        </div>
+        <a
+          class="bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 mt-10 rounded-full"
+          href="/"
+        >
+          Volver al inicio
+        </a>
+      </div>
+       
+    </div>
+  </body>,
+  "container": <div>
+     
+    <div
+      class="container text-base text-1xl mx-auto text-center sm:text-center mt-10"
+    >
+      <h1
+        class="text-center sm:text-center text-4xl antialiased"
+      >
+        Fixed values range
+      </h1>
+      <p
+        class="text-2sm"
+      >
+        A bar will be displayed with the price range between which a price can oscillate
+      </p>
+      <div
+        class="flex flex-wrap -mx-3 mb-6"
+      >
+        <div
+          class="w-full md:w-1/2 px-3 mb-6 md:mb-0 my-8"
+        >
+          <input
+            autocomplete="off"
+            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            name="Inputleft"
+            placeholder="0"
+            readonly=""
+            type="number"
+            value="0"
+          />
+        </div>
+        <div
+          class="w-full md:w-1/2 px-3 my-8"
+        >
+          <input
+            autocomplete="off"
+            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            name="InputRight"
+            placeholder="100"
+            readonly=""
+            type="number"
+            value="100"
+          />
+        </div>
+      </div>
+      <div
+        class="sliderRange"
+      >
+        <div
+          actual-value="0"
+          class="bullet_initial"
+          id="bullet_initial"
+          style="left: 0%;"
+          type="left"
+        />
+        <div
+          class="line"
+        />
+        <div
+          actual-value="100"
+          class="bullet_final"
+          id="bullet_final"
+          style="left: 100%;"
+          type="right"
+        />
+      </div>
+      <a
+        class="bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 mt-10 rounded-full"
+        href="/"
+      >
+        Volver al inicio
+      </a>
+    </div>
+     
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

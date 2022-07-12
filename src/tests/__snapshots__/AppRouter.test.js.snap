@@ -1,0 +1,534 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el AppRouter Debe de mostrar el componente AppRouter 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+       
+      <div>
+        <nav
+          class="flex items-center justify-between flex-wrap bg-black p-6"
+        >
+          <div
+            class="flex items-center flex-shrink-0 text-white mr-6"
+          >
+            <a
+              href="/"
+            >
+              <svg
+                height="110"
+                viewBox="0 0 192.756 192.756"
+                width="110"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M0 0h192.756v192.756H0V0z"
+                  />
+                  <path
+                    d="M35.024 113.982h-2.817l2.817-2.287V78.861h11.619l-2.904 2.289v30.545l2.816 2.287H35.024zM12.666 113.982h7.658l-2.553-2.287V96.643h-2.553v15.052l-2.552 2.287zM27.454 113.982l4.137-11.707-9.859-23.326h-8.891l14.613 35.033zM51.485 114.07h7.658l-2.553-2.199 4.93-21.743h-2.465l-5.017 21.743-2.553 2.199z"
+                    fill="#fff"
+                  />
+                  <path
+                    d="M66.625 103.42c1.232 4.842 2.201 8.363 2.201 8.363l-2.289 2.111h11.62l-9.771-34.857h-8.098l5.897 22.535h-5.634v1.848h6.074zM83.878 113.895h7.659l-2.553-2.375V92.681h-2.553v18.839l-2.553 2.375zM83.878 79.037l20.071 35.033h5.809v-5.984L93.473 79.037h-9.595zM145.32 95.938h-13.291l3.785 3.082v15.932c0-.001 9.506-2.29 9.506-19.014zM131.236 114.951c-7.043-1.145-12.852-9.242-12.852-19.102 0-8.362 4.049-16.021 10.035-18.133v34.067l2.817 3.168zM165.654 115.039c-7.041-1.145-12.852-9.242-12.852-19.101 0-8.362 4.049-16.021 10.035-18.133v34.154l2.817 3.08zM167.15 77.805c7.131 1.144 12.941 9.243 12.941 19.102 0 8.363-4.139 16.109-10.035 18.133V80.974l-2.906-3.169zM132.029 77.717s4.93-.088 8.713 3.433l3.875-2.641v11.707s-4.666-10.123-12.588-10.123v-2.376zM112.311 78.949h-7.659l2.553 2.377v17.34h2.553v-17.34l2.553-2.377z"
+                    fill="#fff"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div
+            class="block lg:hidden"
+          >
+            <button
+              class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+            >
+              <svg
+                class="fill-current h-3 w-3"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  Menu
+                </title>
+                <path
+                  d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
+          >
+            <div
+              class="text-sm lg:flex-grow"
+            >
+              <a
+                class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
+                href="/"
+              >
+                <span>
+                  Home
+                </span>
+              </a>
+              <a
+                class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
+                href="/exercise1"
+              >
+                <span>
+                  Exercise 1
+                </span>
+              </a>
+              <a
+                class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
+                href="/exercise2"
+              >
+                <span>
+                  Exercise 2
+                </span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div
+        class="my-10"
+      >
+        <h1
+          class="text-center sm:text-center text-4xl antialiased"
+        >
+          Prueba de Técnica de MANGO
+        </h1>
+        <h2
+          class="text-center sm:text-center text-2xl antialiased"
+        >
+          Realizada por: Joshua A. Díaz Robayna
+        </h2>
+        <h3
+          class="text-center sm:text-center text-2xl antialiased"
+        >
+          Padawan Jedi en ReactJs
+        </h3>
+      </div>
+      <footer
+        class="p-4 bg-black shadow md:flex md:items-center md:justify-between md:p-6 mt-10 dark:bg-gray-800"
+      >
+        <div
+          class="container flex flex-wrap items-center justify-center px-4 py-8 mx-auto lg:justify-between"
+        >
+          <div
+            class="flex flex-wrap justify-center"
+          >
+            <ul
+              class="flex items-center space-x-4"
+            >
+              <li>
+                <a
+                  class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
+                  href="/"
+                >
+                  <span>
+                    Home
+                  </span>
+                </a>
+              </li>
+              <a
+                class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
+                href="/exercise1"
+              >
+                <span>
+                  Exercise 1
+                </span>
+              </a>
+              <a
+                class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
+                href="/exercise2"
+              >
+                <span>
+                  Exercise 2
+                </span>
+              </a>
+            </ul>
+          </div>
+          <div
+            class="flex justify-center mt-4 lg:mt-0"
+          >
+            <a>
+              <svg
+                class="w-6 h-6 text-blue-600"
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                />
+              </svg>
+            </a>
+            <a
+              class="ml-3"
+            >
+              <svg
+                class="w-6 h-6 text-blue-300"
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                />
+              </svg>
+            </a>
+            <a
+              class="ml-3"
+            >
+              <svg
+                class="w-6 h-6 text-pink-400"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <rect
+                  height="20"
+                  rx="5"
+                  ry="5"
+                  width="20"
+                  x="2"
+                  y="2"
+                />
+                <path
+                  d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+                />
+              </svg>
+            </a>
+            <a
+              class="ml-3"
+            >
+              <svg
+                class="w-6 h-6 text-blue-500"
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                  stroke="none"
+                />
+                <circle
+                  cx="4"
+                  cy="4"
+                  r="2"
+                  stroke="none"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+       
+    </div>
+  </body>,
+  "container": <div>
+     
+    <div>
+      <nav
+        class="flex items-center justify-between flex-wrap bg-black p-6"
+      >
+        <div
+          class="flex items-center flex-shrink-0 text-white mr-6"
+        >
+          <a
+            href="/"
+          >
+            <svg
+              height="110"
+              viewBox="0 0 192.756 192.756"
+              width="110"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                clip-rule="evenodd"
+                fill-rule="evenodd"
+              >
+                <path
+                  d="M0 0h192.756v192.756H0V0z"
+                />
+                <path
+                  d="M35.024 113.982h-2.817l2.817-2.287V78.861h11.619l-2.904 2.289v30.545l2.816 2.287H35.024zM12.666 113.982h7.658l-2.553-2.287V96.643h-2.553v15.052l-2.552 2.287zM27.454 113.982l4.137-11.707-9.859-23.326h-8.891l14.613 35.033zM51.485 114.07h7.658l-2.553-2.199 4.93-21.743h-2.465l-5.017 21.743-2.553 2.199z"
+                  fill="#fff"
+                />
+                <path
+                  d="M66.625 103.42c1.232 4.842 2.201 8.363 2.201 8.363l-2.289 2.111h11.62l-9.771-34.857h-8.098l5.897 22.535h-5.634v1.848h6.074zM83.878 113.895h7.659l-2.553-2.375V92.681h-2.553v18.839l-2.553 2.375zM83.878 79.037l20.071 35.033h5.809v-5.984L93.473 79.037h-9.595zM145.32 95.938h-13.291l3.785 3.082v15.932c0-.001 9.506-2.29 9.506-19.014zM131.236 114.951c-7.043-1.145-12.852-9.242-12.852-19.102 0-8.362 4.049-16.021 10.035-18.133v34.067l2.817 3.168zM165.654 115.039c-7.041-1.145-12.852-9.242-12.852-19.101 0-8.362 4.049-16.021 10.035-18.133v34.154l2.817 3.08zM167.15 77.805c7.131 1.144 12.941 9.243 12.941 19.102 0 8.363-4.139 16.109-10.035 18.133V80.974l-2.906-3.169zM132.029 77.717s4.93-.088 8.713 3.433l3.875-2.641v11.707s-4.666-10.123-12.588-10.123v-2.376zM112.311 78.949h-7.659l2.553 2.377v17.34h2.553v-17.34l2.553-2.377z"
+                  fill="#fff"
+                />
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div
+          class="block lg:hidden"
+        >
+          <button
+            class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+          >
+            <svg
+              class="fill-current h-3 w-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Menu
+              </title>
+              <path
+                d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
+        >
+          <div
+            class="text-sm lg:flex-grow"
+          >
+            <a
+              class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
+              href="/"
+            >
+              <span>
+                Home
+              </span>
+            </a>
+            <a
+              class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
+              href="/exercise1"
+            >
+              <span>
+                Exercise 1
+              </span>
+            </a>
+            <a
+              class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
+              href="/exercise2"
+            >
+              <span>
+                Exercise 2
+              </span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div
+      class="my-10"
+    >
+      <h1
+        class="text-center sm:text-center text-4xl antialiased"
+      >
+        Prueba de Técnica de MANGO
+      </h1>
+      <h2
+        class="text-center sm:text-center text-2xl antialiased"
+      >
+        Realizada por: Joshua A. Díaz Robayna
+      </h2>
+      <h3
+        class="text-center sm:text-center text-2xl antialiased"
+      >
+        Padawan Jedi en ReactJs
+      </h3>
+    </div>
+    <footer
+      class="p-4 bg-black shadow md:flex md:items-center md:justify-between md:p-6 mt-10 dark:bg-gray-800"
+    >
+      <div
+        class="container flex flex-wrap items-center justify-center px-4 py-8 mx-auto lg:justify-between"
+      >
+        <div
+          class="flex flex-wrap justify-center"
+        >
+          <ul
+            class="flex items-center space-x-4"
+          >
+            <li>
+              <a
+                class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
+                href="/"
+              >
+                <span>
+                  Home
+                </span>
+              </a>
+            </li>
+            <a
+              class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
+              href="/exercise1"
+            >
+              <span>
+                Exercise 1
+              </span>
+            </a>
+            <a
+              class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4"
+              href="/exercise2"
+            >
+              <span>
+                Exercise 2
+              </span>
+            </a>
+          </ul>
+        </div>
+        <div
+          class="flex justify-center mt-4 lg:mt-0"
+        >
+          <a>
+            <svg
+              class="w-6 h-6 text-blue-600"
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+              />
+            </svg>
+          </a>
+          <a
+            class="ml-3"
+          >
+            <svg
+              class="w-6 h-6 text-blue-300"
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+              />
+            </svg>
+          </a>
+          <a
+            class="ml-3"
+          >
+            <svg
+              class="w-6 h-6 text-pink-400"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <rect
+                height="20"
+                rx="5"
+                ry="5"
+                width="20"
+                x="2"
+                y="2"
+              />
+              <path
+                d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+              />
+            </svg>
+          </a>
+          <a
+            class="ml-3"
+          >
+            <svg
+              class="w-6 h-6 text-blue-500"
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                stroke="none"
+              />
+              <circle
+                cx="4"
+                cy="4"
+                r="2"
+                stroke="none"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+     
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import React from 'react'
+import { Routes, Route, Router } from "react-router-dom";
 import { Footer } from "../components/ui/Footer";
 import { Home } from "../pages/Home";
 import { Menu } from "../components/ui/Menu";
@@ -15,7 +16,7 @@ const App = () => {
           <Route path="exercise2" element={<Exercise2 />} />
           <Route path="*" element={<div>404</div>} />
         </Routes>
-      <Footer />
+        <Footer />
 
     </>
   );

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import InputRange from "../inputs/InputRange"
 import SliderRange from "../slider/SliderRange"
+import React from 'react'
 
 const Range = (props) => {
   const { max, min, readOnly, rangePrince } = props;
