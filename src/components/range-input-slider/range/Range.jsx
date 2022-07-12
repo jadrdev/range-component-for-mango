@@ -3,7 +3,7 @@ import InputRange from "../inputs/InputRange"
 import SliderRange from "../slider/SliderRange"
 
 const Range = (props) => {
-  const { max, min, readOnly } = props;
+  const { max, min, readOnly, rangePrince } = props;
   const [selectedComponent, setSelectedComponent] = useState("bullet_initial");
   const [oldXMousePosition, setOldXMousePosition] = useState(0);
   const [xLeftComponent, setXLeftComponent] = useState(0);
@@ -29,13 +29,20 @@ const Range = (props) => {
   const selectorRight = useRef(null);
   const selectorLeft = useRef(null);
 
+  const [positionsArray, setPositionArray] = useState(rangePrince);
+  const [arrayLeftState, setArrayLeftState] = useState(0);
+  const [arrayRightState, setArrayRightState] = useState(
+    rangePrince?.length - 1
+  );
+
   useEffect(() => {
     setExtremesValues({
       left: { min: min, max: max },
       right: { min: min, max: max},
     });
     setActualPosition({ ...actualPosition, left: min, right: max });
-  }, [min, max]);
+    readOnly && setPositionArray(rangePrince);
+  }, [min, max, rangePrince]);
 
   let mousedown = (e, selector) => {
     setSelectedComponent(selector);
@@ -56,12 +63,12 @@ const Range = (props) => {
       switch (xDirection) {
         case "left":
           readOnly
-            ? console.log('Ejerciio2')
+            ? moveToLeftFixed(e, barRangeWidth, barLeftPosition, getValue)
             : moveToLeft(e, barRangeWidth, barLeftPosition, getValue);
           return;
         case "right":
           readOnly
-            ? console.log('Ejerciio2')
+            ? moveToRightFixed(e, barRangeWidth, barLeftPosition, getValue)
             : moveToRight(e, barRangeWidth, barLeftPosition, getValue);
           return;
         default:
@@ -94,10 +101,36 @@ const Range = (props) => {
   };
 
   let mouseup = (e) => {
-    // let newPosition = getArrayState();
-    // readOnly && changeActualPosition(positionsArray[newPosition]);
-    // fixedType && setArrayState()(newPosition);
+    let newPosition = getArrayState();
+    readOnly && changeActualPosition(positionsArray[newPosition]);
+    readOnly && setArrayState()(newPosition);
     setMoveAllowed(false);
+  };
+
+  let moveToLeftFixed = (e, barRangeWidth, barLeftPosition, getValue) => {
+    if (!canMoveToLeft()) return;
+    let newPosition = getArrayState() - 1;
+    if (newPosition + 1 === 0) return;
+    let newValue = positionsArray[newPosition];
+    if (getXComponent() > 0 && getValue >= Math.round(newValue)) {
+      setXComponent()(((e.clientX - barLeftPosition) * 100) / barRangeWidth);
+    } else {
+      changeActualPosition(positionsArray[newPosition]);
+      setArrayState()(newPosition);
+    }
+  };
+
+  let moveToRightFixed = (e, barRangeWidth, barLeftPosition, getValue) => {
+    if (!canMoveToRight()) return;
+    let newPosition = getArrayState() + 1;
+    if (newPosition === rangePrince.length) return;
+    let newValue = positionsArray[newPosition];
+    if (getXComponent() < 100 && getValue <= Math.round(newValue)) {
+      setXComponent()(((e.clientX - barLeftPosition) * 100) / barRangeWidth);
+    } else {
+      changeActualPosition(positionsArray[newPosition]);
+      setArrayState()(newPosition);
+    }
   };
 
   let moveToLeft = (e, barRangeWidth, barLeftPosition, getValue) => {
@@ -131,6 +164,18 @@ const Range = (props) => {
     return selectedComponent?.id === "bullet_final"
       ? xRightComponent
       : xLeftComponent;
+  };
+
+  let setArrayState = () => {
+    return selectedComponent?.id === "bullet_final"
+      ? setArrayRightState
+      : setArrayLeftState;
+  };
+
+  let getArrayState = () => {
+    return selectedComponent?.id === "bullet_final"
+      ? arrayRightState
+      : arrayLeftState;
   };
 
   let changeActualPosition = (value) => {
@@ -175,6 +220,7 @@ const Range = (props) => {
         UpdateBullets={UpdateBullets}
         selectorRight={selectorRight}
         selectorLeft={selectorLeft}
+        readOnly={readOnly}
       />
       
       <SliderRange

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const InputRange = (props) => {
   const {
@@ -9,11 +9,17 @@ const InputRange = (props) => {
     setActualPosition,
     UpdateBullets,
     selectorRight,
-    selectorLeft
+    selectorLeft,
+    readOnly,
   } = props;
 
-  const [actualPositionLeft, setActualPositionLeft] = useState(actualPosition.left);
-  const [actualPositionRight, setActualPositionRight] = useState(actualPosition.right);
+  const [actualPositionLeft, setactualPositionLeft] = useState(actualPosition.left);
+  const [actualPositionRight, setactualPositionRight] = useState(actualPosition.right);
+
+  useEffect(() => { 
+    setactualPositionLeft(actualPosition.left);
+    setactualPositionRight(actualPosition.right);
+  }, [actualPosition]);
 
   
   return (
@@ -29,9 +35,11 @@ const InputRange = (props) => {
             ref={selectorLeft}
             onBlur={(e) => { UpdateBullets(actualPosition) }}
             value={actualPositionLeft}
-            defaultValue={1}
             name="Inputleft"
             autoComplete="off"
+            readOnly={readOnly}
+            
+            
             
           />
           
@@ -46,9 +54,9 @@ const InputRange = (props) => {
             ref={selectorRight}
             onBlur={(e) => { UpdateBullets(actualPosition) }}
             value={actualPositionRight}
-            defaultValue={100}
             name="InputRight"
             autoComplete="off"
+            readOnly={readOnly}
           />
         </div>
       </div>

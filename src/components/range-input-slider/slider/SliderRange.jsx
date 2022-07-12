@@ -22,7 +22,6 @@ const SliderRange = (
         onMouseUp={(e) => mouseup(e)}
         ref={refence}
       >
-        {/* <span className="ValorMinimo">{min} {currency}</span> */}
         <div
           id="bullet_initial"
           className='bullet_initial'
@@ -33,7 +32,6 @@ const SliderRange = (
           onMouseDown={(e) => mousedown(e, selectorLeft.current)}
         />
         <div className='line'></div>
-        {/* <span className="ValorMaximo" >{max} {currency}</span> */}
         <div
           id="bullet_final"
           className='bullet_final'
