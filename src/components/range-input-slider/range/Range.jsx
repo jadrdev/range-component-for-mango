@@ -105,6 +105,20 @@ const Range = (props) => {
     let newPosition = getArrayState();
     readOnly && changeActualPosition(positionsArray[newPosition]);
     readOnly && setArrayState()(newPosition);
+    if (!readOnly) {
+      if (actualPosition.left > actualPosition.right && selectedComponent.id === "bullet_initial") {
+        let position = actualPosition.right - 1;
+        setActualPosition({ ...actualPosition, left: position });
+        setXLeftComponent(((position - min) * 100) / (max - min));
+      } else if (actualPosition.right < actualPosition.left && selectedComponent.id === "bullet_final") {
+        let position = actualPosition.left + 1;
+        setActualPosition({ ...actualPosition, right: position });
+        setXRightComponent(((position - min) * 100) / (max - min));
+      }
+    }
+
+
+
     setMoveAllowed(false);
   };
 
