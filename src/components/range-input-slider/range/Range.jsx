@@ -283,7 +283,7 @@ const Range = (props) => {
     const { left, right } = newValue;
     switch (selectedComponent.id) {
       case "bullet_initial":
-        if (left <= 0) {
+        if (left < min) {
           setActualPosition({ ...actualPosition, left: min });
         } else if (left >= right) {
           setActualPosition({ ...actualPosition, left: right - 1 });
@@ -291,7 +291,7 @@ const Range = (props) => {
         setXLeftComponent(((left - min) * 100) / (max - min));
         return;
       case "bullet_final":
-        if (right >= 100) {
+        if (right >= max) {
           setActualPosition({ ...actualPosition, right: max });
         } else if (right <= left) {
           setActualPosition({ ...actualPosition, right: left + 1 });
