@@ -2,6 +2,7 @@ import React from "react";
 import AppRouter from "./routes/AppRouter";
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
+import './input.css';
 
 const rootElement = document.getElementById("app");
 const root = createRoot(rootElement);
