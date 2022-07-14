@@ -11,7 +11,7 @@
     "start": "webpack-cli serve --open --mode development",
     "build": "webpack --mode production",
     "test": "jest --watchAll",
-    "docs": "jsdoc -c jsdoc.json"
+    "docs": "npx jsdoc -c jsdoc.json"
   },
   "dependencies": {
     "@babel/core": "^7.18.6",

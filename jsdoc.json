@@ -2,8 +2,8 @@
   "plugins": [],
   "source" : {
     "include": ["src"],
-    "exclude": ["node_modules", "docs"],
-    "includePattern": ".js$"
+    "exclude": "(node_modules | docs)",
+    "includePattern": ".jsx$"
   },
   "template": {
     "cleverLinks": false,

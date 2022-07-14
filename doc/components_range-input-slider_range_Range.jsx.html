@@ -1,4 +1,32 @@
-import { useEffect, useRef, useState } from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/range-input-slider/range/Range.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/range-input-slider/range/Range.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useEffect, useRef, useState } from "react";
 import InputRange from "../inputs/InputRange"
 import SliderRange from "../slider/SliderRange"
 import React from 'react'
@@ -43,7 +71,7 @@ const Range = (props) => {
       right: { min: min, max: max},
     });
     setActualPosition({ ...actualPosition, left: min, right: max });
-    readOnly && setPositionArray(rangePrince);
+    readOnly &amp;&amp; setPositionArray(rangePrince);
   }, [min, max, rangePrince]);
 
    const mousedown = (e, selector) => {
@@ -56,7 +84,11 @@ const Range = (props) => {
     moveSelector(e);
   };
 
-
+  /**
+ * Realiza el movimiento de la barra
+ * @param {barRangeWidth} number 
+ * @param {e} acction 
+ */
   
   const moveSelector = (e) => {
     let barRangeWidth = rangeComponent.current.offsetWidth;
@@ -89,13 +121,13 @@ const Range = (props) => {
 
   const canMoveToRight = () => {
     if (selectedComponent.id === "bullet_initial") {
-      return actualPosition.left < actualPosition.right - 1;
+      return actualPosition.left &lt; actualPosition.right - 1;
     }
     return true;
   };
 
   const getMouseDirection = (e) => {
-    if (e.pageX < oldXMousePosition) {
+    if (e.pageX &lt; oldXMousePosition) {
       xDirection = "left";
     } else if (e.pageX > oldXMousePosition) {
       xDirection = "right";
@@ -105,19 +137,22 @@ const Range = (props) => {
 
   const mouseup = (e) => {
     let newPosition = getArrayState();
-    readOnly && changeActualPosition(positionsArray[newPosition]);
-    readOnly && setArrayState()(newPosition);
+    readOnly &amp;&amp; changeActualPosition(positionsArray[newPosition]);
+    readOnly &amp;&amp; setArrayState()(newPosition);
     if (!readOnly) {
-      if (actualPosition.left > actualPosition.right && selectedComponent.id === "bullet_initial") {
+      if (actualPosition.left > actualPosition.right &amp;&amp; selectedComponent.id === "bullet_initial") {
         let position = actualPosition.right - 1;
         setActualPosition({ ...actualPosition, left: position });
         setXLeftComponent(((position - min) * 100) / (max - min));
-      } else if (actualPosition.right < actualPosition.left && selectedComponent.id === "bullet_final") {
+      } else if (actualPosition.right &lt; actualPosition.left &amp;&amp; selectedComponent.id === "bullet_final") {
         let position = actualPosition.left + 1;
         setActualPosition({ ...actualPosition, right: position });
         setXRightComponent(((position - min) * 100) / (max - min));
       }
     }
+
+
+
     setMoveAllowed(false);
   };
 
@@ -126,7 +161,7 @@ const Range = (props) => {
     let newPosition = getArrayState() - 1;
     if (newPosition + 1 === 0) return;
     let newValue = positionsArray[newPosition];
-    if (getXComponent() > 0 && getValue >= Math.round(newValue)) {
+    if (getXComponent() > 0 &amp;&amp; getValue >= Math.round(newValue)) {
       setXComponent()(((e.clientX - barLeftPosition) * 100) / barRangeWidth);
     } else {
       changeActualPosition(positionsArray[newPosition]);
@@ -139,7 +174,7 @@ const Range = (props) => {
     let newPosition = getArrayState() + 1;
     if (newPosition === rangePrince.length) return;
     let newValue = positionsArray[newPosition];
-    if (getXComponent() < 100 && getValue <= Math.round(newValue)) {
+    if (getXComponent() &lt; 100 &amp;&amp; getValue &lt;= Math.round(newValue)) {
       setXComponent()(((e.clientX - barLeftPosition) * 100) / barRangeWidth);
     } else {
       changeActualPosition(positionsArray[newPosition]);
@@ -159,7 +194,7 @@ const Range = (props) => {
 
   const moveToRight = (e, barRangeWidth, barLeftPosition, getValue) => {
     if (!canMoveToRight()) return;
-    if (getXComponent() < 100) {
+    if (getXComponent() &lt; 100) {
       setXComponent()(((e.clientX - barLeftPosition) * 100) / barRangeWidth);
       changeActualPosition(Math.round(getValue));
     } else if (getXComponent() === 100) {
@@ -201,7 +236,7 @@ const Range = (props) => {
     const { left, right } = newValue;
     switch (selectedComponent.id) {
       case "bullet_initial":
-        if (left <= 0) {
+        if (left &lt;= 0) {
           setActualPosition({ ...actualPosition, left: min });
         } else if (left >= right) {
           setActualPosition({ ...actualPosition, left: right - 1 });
@@ -211,7 +246,7 @@ const Range = (props) => {
       case "bullet_final":
         if (right >= 100) {
           setActualPosition({ ...actualPosition, right: max });
-        } else if (right <= left) {
+        } else if (right &lt;= left) {
           setActualPosition({ ...actualPosition, right: left + 1 });
         }
         setXRightComponent(((right - min) * 100) / (max - min));
@@ -222,8 +257,8 @@ const Range = (props) => {
   
 
   return (
-    <>
-      <InputRange
+    &lt;>
+      &lt;InputRange
         max={max}
         min={min}
         actualPosition={actualPosition}
@@ -235,7 +270,7 @@ const Range = (props) => {
         readOnly={readOnly}
       />
       
-      <SliderRange
+      &lt;SliderRange
         refence={rangeComponent}
         max={max}
         min={min}
@@ -250,9 +285,31 @@ const Range = (props) => {
         selectorRight={selectorRight}
         selectorLeft={selectorLeft}
         />
-    </>
+    &lt;/>
   )
 }
 
 
-export default Range
+export default Range</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#useFetchApi">useFetchApi</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Thu Jul 14 2022 10:48:45 GMT+0200 (hora de verano de Europa central)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

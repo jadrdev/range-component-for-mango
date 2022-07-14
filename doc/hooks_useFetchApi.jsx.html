@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: hooks/useFetchApi.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,37 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: hooks/useFetchApi.jsx</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useEffect, useState } from 'react';
 
+/**
+ * It fetches data from the server and sets the data to the state
+ * @returns The data is being returned.
+ */
 
-    <h3> </h3>
+const useFetchApi = (url) => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((numbers) => { setData(numbers); });
+  }, []);
 
+  return data;
+  
+};
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+export default useFetchApi;</code></pre>
+        </article>
+    </section>
 
 
 
