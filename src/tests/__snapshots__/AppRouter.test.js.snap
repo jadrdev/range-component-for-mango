@@ -157,7 +157,9 @@ Object {
           <div
             class="flex justify-center mt-4 lg:mt-0"
           >
-            <a>
+            <a
+              href="https://www.facebook.com/jadrdev"
+            >
               <svg
                 class="w-6 h-6 text-blue-600"
                 fill="currentColor"
@@ -173,6 +175,7 @@ Object {
             </a>
             <a
               class="ml-3"
+              href="https://www.twitter.com/jadrdev"
             >
               <svg
                 class="w-6 h-6 text-blue-300"
@@ -189,6 +192,7 @@ Object {
             </a>
             <a
               class="ml-3"
+              href="https://www.isntagram.com/jadrdev"
             >
               <svg
                 class="w-6 h-6 text-pink-400"
@@ -214,6 +218,7 @@ Object {
             </a>
             <a
               class="ml-3"
+              href="https://www.linkedin.com/in/jadrdev/"
             >
               <svg
                 class="w-6 h-6 text-blue-500"
@@ -395,7 +400,9 @@ Object {
         <div
           class="flex justify-center mt-4 lg:mt-0"
         >
-          <a>
+          <a
+            href="https://www.facebook.com/jadrdev"
+          >
             <svg
               class="w-6 h-6 text-blue-600"
               fill="currentColor"
@@ -411,6 +418,7 @@ Object {
           </a>
           <a
             class="ml-3"
+            href="https://www.twitter.com/jadrdev"
           >
             <svg
               class="w-6 h-6 text-blue-300"
@@ -427,6 +435,7 @@ Object {
           </a>
           <a
             class="ml-3"
+            href="https://www.isntagram.com/jadrdev"
           >
             <svg
               class="w-6 h-6 text-pink-400"
@@ -452,6 +461,7 @@ Object {
           </a>
           <a
             class="ml-3"
+            href="https://www.linkedin.com/in/jadrdev/"
           >
             <svg
               class="w-6 h-6 text-blue-500"
