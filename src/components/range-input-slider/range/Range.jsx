@@ -241,10 +241,10 @@ const Range = (props) => {
 
   const moveToRight = (e, barRangeWidth, barLeftPosition, getValue) => {
     if (!canMoveToRight()) return;
-    if (getXComponent() < max) {
+    if (getXComponent() < 100) {
       setXComponent()(((e.clientX - barLeftPosition) * 100) / barRangeWidth);
       changeActualPosition(Math.round(getValue));
-    } else if (getXComponent() === max) {
+    } else if (getXComponent() === 100) {
       changeActualPosition(max);
     }
   };
