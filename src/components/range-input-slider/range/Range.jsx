@@ -25,7 +25,8 @@ const Range = (props) => {
     left: min,
     right: max,
   });
-  let xDirection = "";
+  
+  let xDirection = '';
 
   const selectorRight = useRef(null);
   const selectorLeft = useRef(null);
@@ -45,54 +46,53 @@ const Range = (props) => {
     readOnly && setPositionArray(rangePrince);
   }, [min, max, rangePrince]);
 
-  let mousedown = (e, selector) => {
+  const mousedown = (e, selector) => {
     setSelectedComponent(selector);
     setMoveAllowed(true);
   };
 
-  let mousemove = (e) => {
+  const mousemove = (e) => {
     getMouseDirection(e);
     moveSelector(e);
   };
 
-  let moveSelector = (e) => {
+  const moveSelector = (e) => {
     let barRangeWidth = rangeComponent.current.offsetWidth;
     let barLeftPosition = rangeComponent.current.offsetLeft;
     let getValue = min + (max - min) * (getXComponent() / 100);
-    console.log(getValue)
     if (moveAllowed) {
       switch (xDirection) {
         case "left":
           readOnly
             ? moveToLeftFixed(e, barRangeWidth, barLeftPosition, getValue)
             : moveToLeft(e, barRangeWidth, barLeftPosition, getValue);
-          return;
+          break;
         case "right":
           readOnly
             ? moveToRightFixed(e, barRangeWidth, barLeftPosition, getValue)
             : moveToRight(e, barRangeWidth, barLeftPosition, getValue);
-          return;
+          break;
         default:
-          return;
+          break;
       }
     }
   };
 
-  let canMoveToLeft = () => {
+  const canMoveToLeft = () => {
     if (selectedComponent.id === "bullet_final") {
       return actualPosition.right > actualPosition.left + 1;
     }
     return true;
   };
 
-  let canMoveToRight = () => {
+  const canMoveToRight = () => {
     if (selectedComponent.id === "bullet_initial") {
       return actualPosition.left < actualPosition.right - 1;
     }
     return true;
   };
 
-  let getMouseDirection = (e) => {
+  const getMouseDirection = (e) => {
     if (e.pageX < oldXMousePosition) {
       xDirection = "left";
     } else if (e.pageX > oldXMousePosition) {
@@ -101,7 +101,7 @@ const Range = (props) => {
     setOldXMousePosition(e.pageX);
   };
 
-  let mouseup = (e) => {
+  const mouseup = (e) => {
     let newPosition = getArrayState();
     readOnly && changeActualPosition(positionsArray[newPosition]);
     readOnly && setArrayState()(newPosition);
@@ -122,7 +122,7 @@ const Range = (props) => {
     setMoveAllowed(false);
   };
 
-  let moveToLeftFixed = (e, barRangeWidth, barLeftPosition, getValue) => {
+  const moveToLeftFixed = (e, barRangeWidth, barLeftPosition, getValue) => {
     if (!canMoveToLeft()) return;
     let newPosition = getArrayState() - 1;
     if (newPosition + 1 === 0) return;
@@ -135,7 +135,7 @@ const Range = (props) => {
     }
   };
 
-  let moveToRightFixed = (e, barRangeWidth, barLeftPosition, getValue) => {
+  const moveToRightFixed = (e, barRangeWidth, barLeftPosition, getValue) => {
     if (!canMoveToRight()) return;
     let newPosition = getArrayState() + 1;
     if (newPosition === rangePrince.length) return;
@@ -148,7 +148,7 @@ const Range = (props) => {
     }
   };
 
-  let moveToLeft = (e, barRangeWidth, barLeftPosition, getValue) => {
+  const moveToLeft = (e, barRangeWidth, barLeftPosition, getValue) => {
     if (!canMoveToLeft()) return;
     if (getXComponent() > 0) {
       setXComponent()(((e.clientX - barLeftPosition) * 100) / barRangeWidth);
@@ -158,7 +158,7 @@ const Range = (props) => {
     }
   };
 
-  let moveToRight = (e, barRangeWidth, barLeftPosition, getValue) => {
+  const moveToRight = (e, barRangeWidth, barLeftPosition, getValue) => {
     if (!canMoveToRight()) return;
     if (getXComponent() < 100) {
       setXComponent()(((e.clientX - barLeftPosition) * 100) / barRangeWidth);
@@ -168,39 +168,37 @@ const Range = (props) => {
     }
   };
 
-  let setXComponent = () => {
-    console.log(selectedComponent.id)
+  const setXComponent = () => {
     return selectedComponent?.id === "bullet_final"
       ? setXRightComponent
       : setXLeftComponent;
   };
 
-  let getXComponent = () => {
+  const getXComponent = () => {
     return selectedComponent?.id === "bullet_final"
       ? xRightComponent
       : xLeftComponent;
   };
 
-  let setArrayState = () => {
+  const setArrayState = () => {
     return selectedComponent?.id === "bullet_final"
       ? setArrayRightState
       : setArrayLeftState;
   };
 
-  let getArrayState = () => {
+  const getArrayState = () => {
     return selectedComponent?.id === "bullet_final"
       ? arrayRightState
       : arrayLeftState;
   };
 
-  let changeActualPosition = (value) => {
-    console.log(selectedComponent.id)
+  const changeActualPosition = (value) => {
     selectedComponent.id === "bullet_final"
       ? setActualPosition({ ...actualPosition, right: value })
       : setActualPosition({ ...actualPosition, left: value });
   };
 
-  let UpdateBullets = (newValue) => {
+  const UpdateBullets = (newValue) => {
     const { left, right } = newValue;
     switch (selectedComponent.id) {
       case "bullet_initial":
