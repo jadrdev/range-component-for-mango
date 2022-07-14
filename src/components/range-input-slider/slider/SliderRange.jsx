@@ -4,12 +4,9 @@ import './SliderRange.css';
 * Componemts InputRange
 * 
 * @param {reference} refence
-* @param {String} currency
 * @param {Number} positionLeft
 * @param {Number} positionRight
-* @param {Object} extremesValues
 * @param {Function} mousedown
-* @param {Function} setActualPosition
 * @param {Object} actualPosition
 * @param {Function} mousemove
 * @param {Function} mouseup
@@ -22,12 +19,9 @@ import './SliderRange.css';
 
 const SliderRange = (
   { refence,
-    currency,
     positionLeft,
     positionRight,
-    extremesValues,
     mousedown,
-    setActualPosition,
     actualPosition,
     mousemove,
     mouseup,

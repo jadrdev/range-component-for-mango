@@ -8,13 +8,12 @@ import React from 'react'
 * @param {Number} min
 * @param {Number} max
 * @param {Boolean} readonly
-* @param {number} actualPosition,
-* @param {Function} setActualPosition,
-* @param {Function} UpdateBullets,
-* @param {Object} selectorRight,
-* @param {Object} selectorLeft,
-* @param {Boolean} readOnly,
-
+* @param {number} actualPosition
+* @param {Function} setActualPosition
+* @param {Function} UpdateBullets
+* @param {Object} selectorRight
+* @param {Object} selectorLeft
+* @param {Boolean} readOnly
 * 
 */
 
