@@ -22,7 +22,7 @@ export const Footer = () => {
           </ul>
         </div>
         <div className="flex justify-center mt-4 lg:mt-0">
-          <a>
+          <a href="https://www.facebook.com/jadrdev">
             <svg
               fill="currentColor"
               strokeLinecap="round"
@@ -36,7 +36,7 @@ export const Footer = () => {
               ></path>
             </svg>
           </a>
-          <a className="ml-3">
+          <a href="https://www.twitter.com/jadrdev" className="ml-3">
             <svg
               fill="currentColor"
               strokeLinecap="round"
@@ -50,7 +50,7 @@ export const Footer = () => {
               ></path>
             </svg>
           </a>
-          <a className="ml-3">
+          <a href="https://www.isntagram.com/jadrdev" className="ml-3">
             <svg
               fill="none"
               stroke="currentColor"
@@ -66,7 +66,7 @@ export const Footer = () => {
               ></path>
             </svg>
           </a>
-          <a className="ml-3">
+          <a href="https://www.linkedin.com/in/jadrdev/" className="ml-3">
             <svg
               fill="currentColor"
               stroke="currentColor"
