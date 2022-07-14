@@ -46,7 +46,7 @@ const Range = (props) => {
     readOnly && setPositionArray(rangePrince);
   }, [min, max, rangePrince]);
 
-  const mousedown = (e, selector) => {
+   const mousedown = (e, selector) => {
     setSelectedComponent(selector);
     setMoveAllowed(true);
   };
@@ -55,7 +55,6 @@ const Range = (props) => {
     getMouseDirection(e);
     moveSelector(e);
   };
-
   const moveSelector = (e) => {
     let barRangeWidth = rangeComponent.current.offsetWidth;
     let barLeftPosition = rangeComponent.current.offsetLeft;
