@@ -63,8 +63,8 @@ const Range = (props) => {
 
 /**
  * 
- * @param {event} e  - evento que se dispara al mover el raton 
- */
+ * @param {e} event  - evento que se dispara al mover el raton 
+*/
 
   const mousemove = (e) => {
     getMouseDirection(e);
@@ -110,7 +110,7 @@ const Range = (props) => {
     return true;
   };
 
-  /**
+/**
  * Check if you can move to the right
  * 
  *

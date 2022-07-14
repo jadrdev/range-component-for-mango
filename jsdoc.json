@@ -3,7 +3,7 @@
   "source" : {
     "include": ["src"],
     "exclude": "(node_modules | docs)",
-    "includePattern": ".jsx$"
+    "includePattern": ".\\.(js|jsx)$"
   },
   "template": {
     "cleverLinks": false,
