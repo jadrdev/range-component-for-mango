@@ -36,7 +36,7 @@ const Range = (props) => {
     right: max,
   });
   
-  let xDirection = '';
+  let xDirection = useRef('');
 
   const selectorRight = useRef(null);
   const selectorLeft = useRef(null);
