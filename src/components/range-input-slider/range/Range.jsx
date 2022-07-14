@@ -3,6 +3,16 @@ import InputRange from "../inputs/InputRange"
 import SliderRange from "../slider/SliderRange"
 import React from 'react'
 
+/**
+ * Componemts RangeComponent
+ * 
+ * @param {Object} props
+ * @param {Number} min
+ * @param {Number} max
+ * @param {Boolean} readonly
+ * @param {Array} rangePrice
+ * 
+ */
 const Range = (props) => {
   const { max, min, readOnly, rangePrince } = props;
   const [selectedComponent, setSelectedComponent] = useState("bullet_initial");
@@ -51,12 +61,20 @@ const Range = (props) => {
     setMoveAllowed(true);
   };
 
+/**
+ * 
+ * @param {event} e  - evento que se dispara al mover el raton 
+ */
+
   const mousemove = (e) => {
     getMouseDirection(e);
     moveSelector(e);
   };
 
-
+/**
+ * 
+ * @param {e} event - evento que se dispara al mover el raton 
+ */
   
   const moveSelector = (e) => {
     let barRangeWidth = rangeComponent.current.offsetWidth;
@@ -80,12 +98,23 @@ const Range = (props) => {
     }
   };
 
+
+/**
+ * Check if you can move to the left
+ */
+
   const canMoveToLeft = () => {
     if (selectedComponent.id === "bullet_final") {
       return actualPosition.right > actualPosition.left + 1;
     }
     return true;
   };
+
+  /**
+ * Check if you can move to the right
+ * 
+ *
+ */
 
   const canMoveToRight = () => {
     if (selectedComponent.id === "bullet_initial") {
@@ -94,6 +123,12 @@ const Range = (props) => {
     return true;
   };
 
+/**
+ * Take the direction of the mouse
+ * 
+ * @param {e} event
+ *
+ */
   const getMouseDirection = (e) => {
     if (e.pageX < oldXMousePosition) {
       xDirection = "left";
@@ -102,6 +137,13 @@ const Range = (props) => {
     }
     setOldXMousePosition(e.pageX);
   };
+
+  /**
+   * Collects the mouse position at the moment of lifting the click
+   * @param {e} event
+   *
+   */
+  
 
   const mouseup = (e) => {
     let newPosition = getArrayState();
@@ -121,6 +163,16 @@ const Range = (props) => {
     setMoveAllowed(false);
   };
 
+/**
+* Check if you can move to the left
+* 
+* @param {e} event
+* @param {barRangeWidth} number - width of the range
+* @param {barLeftPosition} number - position of the left side of the range
+* @param {getValue} number - value of the position
+*
+*/
+
   const moveToLeftFixed = (e, barRangeWidth, barLeftPosition, getValue) => {
     if (!canMoveToLeft()) return;
     let newPosition = getArrayState() - 1;
@@ -133,6 +185,16 @@ const Range = (props) => {
       setArrayState()(newPosition);
     }
   };
+
+  /**
+  * Check if you can move to the right
+  * 
+  * @param {e} event
+  * @param {barRangeWidth} number - width of the range
+  * @param {barLeftPosition} number - position of the left side of the range
+  * @param {getValue} number - value of the position
+  *
+  */
 
   const moveToRightFixed = (e, barRangeWidth, barLeftPosition, getValue) => {
     if (!canMoveToRight()) return;
@@ -147,6 +209,16 @@ const Range = (props) => {
     }
   };
 
+/**
+* Make the move to the left
+* 
+* @param {e} event
+* @param {barRangeWidth} number - width of the range
+* @param {barLeftPosition} number - position of the left side of the range
+* @param {getValue} number - value of the position
+*
+*/
+
   const moveToLeft = (e, barRangeWidth, barLeftPosition, getValue) => {
     if (!canMoveToLeft()) return;
     if (getXComponent() > 0) {
@@ -156,6 +228,16 @@ const Range = (props) => {
       changeActualPosition(Math.round(min));
     }
   };
+
+/**
+* Make the move to the Right
+* 
+* @param {e} event
+* @param {barRangeWidth} number - width of the range
+* @param {barLeftPosition} number - position of the left side of the range
+* @param {getValue} number - value of the position
+*
+*/
 
   const moveToRight = (e, barRangeWidth, barLeftPosition, getValue) => {
     if (!canMoveToRight()) return;

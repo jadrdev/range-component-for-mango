@@ -1,5 +1,25 @@
 import React from 'react'
 import './SliderRange.css';
+/**
+* Componemts InputRange
+* 
+* @param {reference} refence
+* @param {String} currency
+* @param {Number} positionLeft
+* @param {Number} positionRight
+* @param {Object} extremesValues
+* @param {Function} mousedown
+* @param {Function} setActualPosition
+* @param {Object} actualPosition
+* @param {Function} mousemove
+* @param {Function} mouseup
+* @param {Function} selectorRight
+* @param {Function} selectorLeft
+* @param {Boolean} readOnly
+* @return {Object}
+* 
+*/
+
 const SliderRange = (
   { refence,
     currency,

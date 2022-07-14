@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: hooks/useFetchApi.jsx</title>
+    <title>JSDoc: Source: constants/Constants.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: hooks/useFetchApi.jsx</h1>
+    <h1 class="page-title">Source: constants/Constants.jsx</h1>
 
     
 
@@ -26,26 +26,18 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { useEffect, useState } from 'react';
-
-/**
- * It fetches data from the server and sets the data to the state
- * @returns The data is being returned.
+            <pre class="prettyprint source linenums"><code>/**
+ * Contants for the application.
+ * 
+ * ServiceURL: The URL of the service.
+ * url1: The URL of the application.
+ * url2: The URL of the application.
+ * 
  */
 
-const useFetchApi = (url) => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((numbers) => { setData(numbers); });
-  }, []);
-
-  return data;
-  
-};
-
-export default useFetchApi;</code></pre>
+export const serviceUrl = 'http://demo5392125.mockable.io';
+export const url1 = `${serviceUrl}/exercise1`;
+export const url2 = `${serviceUrl}/exercise2`;</code></pre>
         </article>
     </section>
 
