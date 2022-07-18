@@ -56,26 +56,30 @@ const Range = (props) => {
     readOnly && setPositionArray(rangePrince);
   }, [min, max, rangePrince]);
 
+/**
+ * When the mouse is clicked down, the selected component is set to the selector and the move is
+ * allowed
+ */
    const mousedown = (e, selector) => {
     setSelectedComponent(selector);
     setMoveAllowed(true);
   };
 
-/**
- * 
- * @param {e} event  - evento que se dispara al mover el raton 
-*/
 
+
+/**
+ * A function that is called when the mouse is moved.
+ */
   const mousemove = (e) => {
     getMouseDirection(e);
     moveSelector(e);
   };
 
-/**
- * 
- * @param {e} event - evento que se dispara al mover el raton 
- */
+
   
+/**
+ * It moves the selector to the left or right depending on the direction of the mouse movement
+ */
   const moveSelector = (e) => {
     let barRangeWidth = rangeComponent.current.offsetWidth;
     let barLeftPosition = rangeComponent.current.offsetLeft;
@@ -99,10 +103,12 @@ const Range = (props) => {
   };
 
 
-/**
- * Check if you can move to the left
- */
 
+/**
+ * If the selected component is the bullet, then return true if the right position is greater than the
+ * left position plus one, otherwise return true.
+ * @returns A boolean value.
+ */
   const canMoveToLeft = () => {
     if (selectedComponent.id === "bullet_final") {
       return actualPosition.right > actualPosition.left + 1;
@@ -110,12 +116,12 @@ const Range = (props) => {
     return true;
   };
 
-/**
- * Check if you can move to the right
- * 
- *
- */
 
+/**
+ * If the selected component is the bullet initial, then return true if the left position is less than
+ * the right position minus one, otherwise return true.
+ * @returns A boolean value.
+ */
   const canMoveToRight = () => {
     if (selectedComponent.id === "bullet_initial") {
       return actualPosition.left < actualPosition.right - 1;
@@ -124,10 +130,8 @@ const Range = (props) => {
   };
 
 /**
- * Take the direction of the mouse
- * 
- * @param {e} event
- *
+ * If the current mouse position is less than the previous mouse position, the mouse is moving left. If
+ * the current mouse position is greater than the previous mouse position, the mouse is moving right.
  */
   const getMouseDirection = (e) => {
     if (e.pageX < oldXMousePosition) {
@@ -138,13 +142,11 @@ const Range = (props) => {
     setOldXMousePosition(e.pageX);
   };
 
-  /**
-   * Collects the mouse position at the moment of lifting the click
-   * @param {e} event
-   *
-   */
-  
 
+  
+/**
+ * It's a function that is called when the mouse is released
+ */
   const mouseup = (e) => {
     let newPosition = getArrayState();
     readOnly && changeActualPosition(positionsArray[newPosition]);
@@ -164,15 +166,19 @@ const Range = (props) => {
   };
 
 /**
-* Check if you can move to the left
-* 
+It moves the slider to the left
+*
 * @param {e} event
 * @param {barRangeWidth} number - width of the range
 * @param {barLeftPosition} number - position of the left side of the range
 * @param {getValue} number - value of the position
+* @returns the value of the variable newPosition.
 *
 */
 
+/**
+ * 
+ */
   const moveToLeftFixed = (e, barRangeWidth, barLeftPosition, getValue) => {
     if (!canMoveToLeft()) return;
     let newPosition = getArrayState() - 1;
@@ -187,14 +193,15 @@ const Range = (props) => {
   };
 
   /**
-  * Check if you can move to the right
-  * 
+  * It moves the slider to the right if the slider is not at the end of the range
+  * @returns the value of the variable newPosition.
   * @param {e} event
   * @param {barRangeWidth} number - width of the range
   * @param {barLeftPosition} number - position of the left side of the range
   * @param {getValue} number - value of the position
   *
   */
+
 
   const moveToRightFixed = (e, barRangeWidth, barLeftPosition, getValue) => {
     if (!canMoveToRight()) return;
@@ -210,14 +217,15 @@ const Range = (props) => {
   };
 
 /**
-* Make the move to the left
-* 
+* It moves the slider to the left
+* @returns A function that takes in an event, barRangeWidth, barLeftPosition, and getValue.
 * @param {e} event
 * @param {barRangeWidth} number - width of the range
 * @param {barLeftPosition} number - position of the left side of the range
 * @param {getValue} number - value of the position
 *
 */
+
 
   const moveToLeft = (e, barRangeWidth, barLeftPosition, getValue) => {
     if (!canMoveToLeft()) return;
@@ -230,8 +238,8 @@ const Range = (props) => {
   };
 
 /**
-* Make the move to the Right
-* 
+* It moves the slider to the right if the slider is not at the rightmost position
+* @returns the value of the x component of the slider.
 * @param {e} event
 * @param {barRangeWidth} number - width of the range
 * @param {barLeftPosition} number - position of the left side of the range
@@ -249,36 +257,64 @@ const Range = (props) => {
     }
   };
 
+/**
+ * If the selected component is the bullet, then set the x position of the right component, otherwise
+ * set the x position of the left component.
+ * @returns A function
+ */
   const setXComponent = () => {
     return selectedComponent?.id === "bullet_final"
       ? setXRightComponent
       : setXLeftComponent;
   };
 
+/**
+ * > If the selected component is the bullet, then return the xRightComponent, otherwise return the
+ * xLeftComponent
+ * @returns The x coordinate of the selected component.
+ */
   const getXComponent = () => {
     return selectedComponent?.id === "bullet_final"
       ? xRightComponent
       : xLeftComponent;
   };
 
+/**
+ * If the selected component is the bullet final, then set the array state to the right array state,
+ * otherwise set the array state to the left array state
+ * @returns The setArrayState function is returning the setArrayRightState function if the
+ * selectedComponent.id is equal to "bullet_final" and the setArrayLeftState function if it is not.
+ */
   const setArrayState = () => {
     return selectedComponent?.id === "bullet_final"
       ? setArrayRightState
       : setArrayLeftState;
   };
 
+/**
+ * It returns the array state of the right side if the selected component is the bullet final,
+ * otherwise it returns the array state of the left side
+ * @returns The array state of the selected component.
+ */
   const getArrayState = () => {
     return selectedComponent?.id === "bullet_final"
       ? arrayRightState
       : arrayLeftState;
   };
 
+/**
+ * It changes the actual position of the selected component.
+ */
   const changeActualPosition = (value) => {
     selectedComponent.id === "bullet_final"
       ? setActualPosition({ ...actualPosition, right: value })
       : setActualPosition({ ...actualPosition, left: value });
   };
 
+/**
+ * It updates the position of the bullets
+ * @returns The function UpdateBullets is returning the function UpdateBullets.
+ */
   const UpdateBullets = (newValue) => {
     const { left, right } = newValue;
     switch (selectedComponent.id) {
